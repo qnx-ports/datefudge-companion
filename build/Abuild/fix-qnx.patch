@@ -1,0 +1,22 @@
+--- datefudge-1.24/datefudge.c.orig	2025-10-03 20:46:21.000000000 +0000
++++ datefudge-1.24/datefudge.c	2025-10-03 20:46:35.000000000 +0000
+@@ -14,7 +14,7 @@
+ #include <stdlib.h>
+ #include <dlfcn.h>
+ #include <assert.h>
+-#include <features.h>
++//#include <features.h>
+ #include <stdbool.h>
+ #include <unistd.h>
+ #include <time.h>
+--- datefudge-1.24/Makefile.orig	2025-10-03 20:48:51.000000000 +0000
++++ datefudge-1.24/Makefile	2025-10-03 20:49:06.000000000 +0000
+@@ -34,7 +34,7 @@
+ 	< $< > $@
+ 
+ datefudge.so: datefudge.o
+-	$(CC) $(LDFLAGS) -o $@ -shared $< -ldl -lc
++	$(CC) $(LDFLAGS) -o $@ -shared $< -lc
+ 
+ datefudge.o: datefudge.c
+ 	$(CC) $(CPPFLAGS) $(CFLAGS) -c -o $@ $<
