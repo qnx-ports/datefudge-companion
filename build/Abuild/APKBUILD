@@ -3,7 +3,7 @@
 # Maintainer: Aaron Bassett <abassett@qnx.com>
 pkgname=datefudge
 pkgver=1.24
-pkgrel=${pkgrel:-0}
+pkgrel=0
 pkgdesc="Tool to fake the system date"
 url="https://packages.debian.org/sid/datefudge"
 arch="all"
@@ -29,7 +29,6 @@ package() {
 }
 
 
-options="$options ${DISABLE_CHECK:+!check}"
 sha512sums="
 cd548a7e8ff10189e101fa339b2845cdd19a59354e43b02cf47e466855ec192dc2084951f7663a94da56a580dd24524047651d8bcb41aa478fe94b24dffaedeb  datefudge_1.24.tar.xz
 be225a6274a31d0c6dbbb1c1d0581d5625fac6317a253627c59f805d1900d708093de1628537f8eb41ca0e6ea1cd22ee9e57a2e6acce8247ad6808d09d0504b4  fix-qnx.patch
